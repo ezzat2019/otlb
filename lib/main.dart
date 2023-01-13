@@ -7,7 +7,9 @@ import 'package:otlb/app/ui/home/home_sc.dart';
 import 'package:otlb/app/utils/di_helper.dart';
 import 'package:provider/provider.dart';
 import 'app/data/repo/lang_repo.dart';
+import 'app/ui/splash_sc.dart';
 import 'app/utils/constants.dart';
+import 'app/utils/theme_manager.dart';
 import 'generated/l10n.dart';
 
 GlobalKey<NavigatorState> navKey=GlobalKey<NavigatorState>();
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     LangRepo casheRepo=DiHelper.getIt.get<LangRepo>();
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -44,13 +46,11 @@ class MyApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: Locale(casheRepo.getCurrentLang()),
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
+          theme: ThemeManager.lightTheme(),
           home:child,
         );
       },
-      child: HomeSc(),
+      child: SplashSc(),
     );
   }
 }

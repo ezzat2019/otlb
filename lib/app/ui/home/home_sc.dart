@@ -24,6 +24,7 @@ class _HomeScState extends State<HomeSc> {
 
   @override
   Widget build(BuildContext context) {
+
     return Consumer<HomeProvider>(
       builder: (context, value, child) {
         return Directionality(
@@ -40,9 +41,13 @@ class _HomeScState extends State<HomeSc> {
                 homeProvider.changeLang();
               },
               child: FittedBox(
-                  child: Text(value.textDirection == TextDirection.rtl
+                child: Text(
+                  value.textDirection == TextDirection.rtl
                       ? Constants.EN
-                      : Constants.AR)),
+                      : Constants.AR,
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
           ),
         );
