@@ -1,4 +1,13 @@
 {
   "home": "الرئيسية",
-  "changeLanguage": "تغير اللغة"
+  "changeLanguage": "تغير اللغة",
+  "createANewAccount": "إنشاء حساب جديد",
+  "phoneNumber": "رقم الهاتف",
+  "fullName": "الاسم بالكامل",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "register": "تسجيل",
+  "alreadyHaveAnAccount": "هل لديك حساب بالفعل؟",
+  "login": "دخول"
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:otlb/app/provider/home_provider.dart';
+import 'package:otlb/app/provider/home/home_provider.dart';
+import 'package:otlb/app/ui/auth/register_sc.dart';
 import 'package:otlb/app/utils/color_manager.dart';
 import 'package:otlb/app/utils/constants.dart';
+import 'package:otlb/app/utils/navigation_manager.dart';
 import 'package:otlb/main.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +28,6 @@ class _LanguageScState extends State<LanguageSc> {
 
   @override
   Widget build(BuildContext context) {
-
     return Consumer<HomeProvider>(
       builder: (context, value, child) {
         return Scaffold(
@@ -58,13 +59,14 @@ class _LanguageScState extends State<LanguageSc> {
                   ),),
                   SizedBox(height: 16.h,),
                   MyOrangeBtn(paddingVal: 36,btnName: "اللغة العربية",btnFun: (){
-
+                    value.setArabicLang();
+                    NavigationManager.gotoAndKill(RegisterSc());
                   },),
                   SizedBox(height: 16.h,),
                   MyOrangeBtn(paddingVal: 36,btnName: "English",btnFun: (){
-
+                    value.setEnglishLang();
+                    NavigationManager.gotoAndKill(RegisterSc());
                   })
-
                 ],
               ),
             ],
@@ -77,6 +79,7 @@ class _LanguageScState extends State<LanguageSc> {
 
   void init() {
   }
+
 }
 
 

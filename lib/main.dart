@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otlb/app/data/source/cashe/cashe_service.dart';
-import 'package:otlb/app/provider/home_provider.dart';
+import 'package:otlb/app/provider/home/home_provider.dart';
 import 'package:otlb/app/ui/home/home_sc.dart';
 import 'package:otlb/app/utils/di_helper.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
-          locale: Locale(casheRepo.getCurrentLang()),
+          locale: Locale(casheRepo.getCurrentLang()==""?Constants.AR:casheRepo.getCurrentLang()),
           debugShowCheckedModeBanner: false,
           theme: ThemeManager.lightTheme(),
           home:child,

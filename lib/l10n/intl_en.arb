@@ -1,4 +1,13 @@
 {
   "home": "home",
-  "changeLanguage": "change language"
+  "changeLanguage": "change language",
+  "createANewAccount": "Create a new account",
+  "phoneNumber": "Phone number",
+  "fullName": "Full name",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "register": "Register",
+  "alreadyHaveAnAccount": "Already have an account ?",
+  "login": "Login"
 }

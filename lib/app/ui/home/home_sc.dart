@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:otlb/app/provider/home_provider.dart';
+import 'package:otlb/app/provider/home/home_provider.dart';
 import 'package:otlb/app/utils/constants.dart';
 import 'package:otlb/main.dart';
 import 'package:provider/provider.dart';

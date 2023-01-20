@@ -11,6 +11,9 @@ class LangRepo{
   {
    casheService.sharedPreferences.setString(Constants.CURRENT_LANG_KEY, currentLang);
   }
+  void clearLanguage(){
+    casheService.sharedPreferences.remove(Constants.CURRENT_LANG_KEY);
+  }
 
   TextDirection getCurrentDir(){
     String lang=getCurrentLang();
@@ -31,7 +34,7 @@ class LangRepo{
        }
      else
        {
-         return Constants.AR;
+         return "";
        }
   }
 }
